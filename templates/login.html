@@ -1,0 +1,109 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+   <head>
+  <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Login</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+      <style>
+         body {
+               margin: 0;
+               padding: 0;
+               background-color: #0c0f38;
+               height: 100vh;
+               }
+               #login .container #login-row #login-column #login-box {
+               margin-top: 120px;
+               max-width: 600px;
+               height: 320px;
+               border: 1px solid #9C9C9C;
+               background-color: #EAEAEA;
+               }
+               #login .container #login-row #login-column #login-box #login-form {
+               padding: 20px;
+               }
+               #login .container #login-row #login-column #login-box #login-form #register-link {
+               margin-top: -85px;
+               }
+       </style>
+    
+   </head>
+  <body class='main-layout'>
+  
+   {% include 'header.html' %}
+
+   {% block content %}
+
+   {% endblock %} 
+   <form action = "/about" method = "POST">
+      {% csrf_token %} 
+      <div id="login">
+         <h3 style="color: #0c0f38;" class="text-center text-white pt-5">Login form</h3>
+         <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+               <div id="login-column" class="col-md-6">
+                     <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                           <h3 class="text-center text-info">Login</h3>
+                           <div class="form-group">
+                                 <label style="color: #0c0f38;" for="username" class="text-info">Username:</label><br>
+                                 <input type="text" name="username" id="username" class="form-control">
+                           </div>
+                           <div class="form-group">
+                                 <label style="color: #0c0f38;" for="password" class="text-info">Password:</label><br>
+                                 <input type="password" name="password" id="password" class="form-control">
+                           </div>
+                           <div class="form-group">
+                                 <br>
+                                 <input style="background-color: #0c0f38;" type="submit" name="Login" class="btn btn-info btn-md" value="Login">
+                           </div>
+                           <div id="register-link" class="text-right">
+                                 <a href="#" class="text-info"></a>
+                           </div>
+                        </form>
+                     </div>
+               </div>
+            </div>
+         </div>
+    </div>
+  </form>
+   
+  <!--  footer -->
+  <footer>
+      <div style="margin-bottom: 0px;" class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p>© 2021 All Rights Reserved. <a href="{% static 'https://html.design/' %}">DataWeb.in</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</footer>
+
+  </body>
+</html>
