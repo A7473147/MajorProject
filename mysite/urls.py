@@ -8,7 +8,11 @@ urlpatterns = [
     path('downloads', views.downloads, name='downloads'),
     path('contact', views.contact, name='contact'),
     path('login', views.login, name='login'),
+    path('scriptrequest', views.scriptrequest, name='scriptrequest'),
     path('login/queries', views.queries, name='queries'),
     path('login/scriptavailable', views.scriptavailable, name='scriptavailable'),
-   
+    path('login/addscript', views.addscript, name='addscript'),
+    path('login/adddata', views.adddata, name='adddata'),
+    path('downloads/<int:id>', views.downloadscript),
+
 ]

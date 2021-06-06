@@ -54,7 +54,7 @@
                      <h1>Powerful<br> Web Scraping</h1>
                      <span>Landing Page 2021</span>
                      <p> Web scraping is about downloading structured data from the web, selecting some of that data, and passing along what you selected to another process. </p>
-                     <a href="{% static '#' %}">Get Started</a>
+                     <a href="{% url 'downloads' %}">Get Started</a>
                   </div>
                </div>
                <div class="col-md-7">
@@ -82,7 +82,7 @@
                      <figure><img  src="{% static 'images/web1.jpg' %}" alt="#"/></figure>
                      <p>Web Scraping is a process of automating the extraction of data in an efficient and fast way. <br> 
                         With the help of web scraping, you can extract data from any website, no matter how large is the data, on your computer.</p>
-                     <a href="{% static '#' %}">Read more</a>
+                     <a href="{% url 'about' %}">Read more</a>
                   </div>
                </div>
             </div>
@@ -124,8 +124,6 @@
                      <p>Data provided is available in csv, excel format.</p>
                   </div>
                </div>
-              
-               <a class="read_more" href="{% static '#' %}">Read More</a>
             </div>
          </div>
       </div>
@@ -150,7 +148,6 @@
                      <h3>Powerful Features</h3>
                      <p>We use Web Scraping as core concept of our services which is very powerful in creating datasets.<br> </p>
                   </div>
-                  <a class="read_more bg" href="{% static '#' %}">Read More</a>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="why-box">
@@ -158,7 +155,6 @@
                      <h3>Totaly Optimised</h3>
                      <p>We provide updated data even from those sites of which gets updated frequently.We do not use adds on our website.  </p>
                   </div>
-                  <a class="read_more bg" href="{% static '#' %}">Read More</a>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="why-box">
@@ -166,62 +162,20 @@
                      <h3>Support</h3>
                      <p> If you require data which is not available on our website, then write to us we will try to provide it to you.<br> </p>
                   </div>
-                  <a class="read_more bg" href="{% static '#' %}">Read More</a>
                </div>
             </div>
          </div>
       </div>
       <!-- end why -->
-      <!-- contact -->
-      <form action = "" method = "POST">
-         {% csrf_token %} 
-         <div id="contact" class="contact">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6 offset-md-3 ">
-                     <form class="main_form">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Name" type="text" name="Name">
-                           </div>
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Email" type="text" name=" Email">
-                           </div>
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Phone" type="text" name="Phone">
-                           </div>
-                           <div class="col-sm-12">
-                              <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
-                           </div>
-                           <div class="col-sm-12">
-                              <button class="send">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </form>
-      <!-- end contact -->
+   
       <!--  footer -->
       <footer>
          <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-10 offset-md-1">
-                     <div class="cont">
-                        <h3>Contact now</h3>
-                        
-                     </div>
-                  </div>
-               </div>
-            </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2021 All Rights Reserved. <a href="{% static 'https://html.design/' %}">DataWeb.in</a></p>
+                        <p>© 2021 All Rights Reserved DataWeb.in</a></p>
                      </div>
                   </div>
                </div>

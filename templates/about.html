@@ -26,6 +26,50 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
       <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+
+      <style>
+        body {
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+}
+
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+.about_column {
+ float: left;
+ width: 33.3%;
+ margin-bottom: 16px;
+ padding: 0 8px;
+}
+
+.card {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ margin: 8px;
+}
+
+.about-section {
+ padding: 50px;
+ text-align: center;
+ background-color: white ;
+ color:black;
+}
+
+.about_container {
+ padding: 0 16px;
+}
+
+.about_container::after, .row::after {
+ content: "";
+ clear: both;
+ display: table;
+}
+     </style>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -42,5 +86,22 @@
    {% block content %}
 
    {% endblock %} 
+
+
+
+   <div class="about-section">
+    <h1>About Us</h1>
+    <p>We provide data of various category from many websites like amazon.in, flipkart.in etc.<br>
+    so that one looking data for their projects from these websites can easily get it.</p>
+    
+  </div >
+  <div class="web about_container about-section">
+  <h2>An Introduction to Web Scraping </h2>
+  <p> Web Scraping is a process of automating the extraction of data in an efficient and fast way. With the help of web scraping, you can extract data from any website, <br>no matter how large is the data, on your computer.
+    Moreover, websites may have data that you cannot copy and paste. Web scraping can help you extract any kind of <br> data that you want.
+    That’s not enough. Let’s say, you copy and paste some data but how to convert or save it in a format of your choice?Web scraping takes care of that too.<br> When you extract web data with the help of a web scraping tool,you would be able to save the data in a format such as CSV.<br> You would then be able to retrieve, analyze and use the data the way you want.
+    So web scraping simplifies the process of extracting data, speeds it up by automating it<br> and creates easy access to the scrapped data by providing it in a CSV format.
+    In simple terms, web scraping saves you the trouble of manually downloading or copying any data and automates the whole process.</p>
+  
   </body>
 </html>

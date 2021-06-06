@@ -28,8 +28,10 @@
       <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
       <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
       <style>
-        .bs-example{
-            margin: 30px;
+        #adjust{
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 20px;
         }
     </style>
     
@@ -42,34 +44,51 @@
 
    {% endblock %} 
 
-   <div class="bs-example">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>Sr no</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Mobile No</th>
-                <th>Websie Name</th>
-                <th>Website url</th>
-                <th>Resolution</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in myresult %}
-            <tr>
-                <td>{{row.0}}</td>
-                <td>{{row.1}}</td>
-                <td>{{row.2}}</td>
-                <td>{{row.3}}</td>
-                <td>{{row.4}}</td>
-                <td><a href="{row.5}">{{row.5}}</a></td>
-                <td>{{row.6}}</td>
-            </tr>
-            {% endfor %}    
-        </tbody>
-    </table>
-</div>
+  <h1 id="adjust">Add Script to DataBase<b></b></h1>
+
+  <h1 style="color: green;" id="adjust">{{s}}<b></b></h1>
+   <form action = "adddata" method = "POST" id="adjust">
+    {% csrf_token %}
+   
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" name="wn" class="form-control" />
+          <label class="form-label" for="form6Example1">Website Name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" name="wu" class="form-control" />
+          <label class="form-label" for="form6Example1">Website Url</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" name="sn" class="form-control" />
+          <label class="form-label" for="form6Example1">Script Name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" name="desc" class="form-control" />
+          <label class="form-label" for="form6Example1">Description</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="email" id="form6Example1" name="requester" class="form-control" />
+          <label class="form-label" for="form6Example1">Requested By</label>
+        </div>
+      </div>
+  
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+  </form>
+  
+
 
   <!--  footer -->
   <footer>

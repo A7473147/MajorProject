@@ -29,7 +29,9 @@
       <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
       <style>
         .bs-example{
-            margin: 30px;
+            margin-top: 30px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
     </style>
     
@@ -42,10 +44,13 @@
 
    {% endblock %} 
 
-   <h1>{{myresult}}</h1>
-
+   
    <div class="bs-example">
-    <table class="table">
+       
+    <a class="btn btn-primary" href="{% url 'addscript' %}"> Insert New Script  </a>
+    <a style="float: right;"  class="btn btn-primary" href="{% url 'queries' %}"> Requested Scripts  </a>
+   
+    <table class="table" style="margin-top: 20px;">
         <thead class="thead-dark">
             <tr>
                 <th>Sr no</th>
